@@ -1,6 +1,6 @@
 /* styling */
 require("styles/main.scss");
-import { filter } from "bluebird";
+import { filter, reject, resolve } from "bluebird";
 /* js */
 import $ from "jquery";
 import { log, logTitle } from "logger";
@@ -362,6 +362,57 @@ logTitle("Title");
 // getRandomUsers(10);
 
 
+///////Trying promises again///////////
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Data back");
+//     }, 3000);
+
+//     setTimeout(() => {
+//         reject("Data not back");       
+//     }, 2000);
+// })
+
+// promise.then((response) => {
+//     log(response);
+// }).catch(error => log(error));
+
+// const firstnamePromise = new Promise((resolve, reject) => {
+//     setTimeout(()=>{
+//         resolve(["A", "B", "C"]);
+//     }, 3000);
+
+//     setTimeout(()=> {
+//         reject("First names did not fetch");
+//     }, 5000)
+// });
+
+// const surnamePromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(["D", "E", "F"]);
+//     }, 2000);
+
+//     setTimeout(() => {
+//         reject("Surnames did not ftech");
+//     }, 3000);
+// });
+
+// Promise.all([firstnamePromise, surnamePromise]).then((response)=> {
+//     const [firstname, surname] = response;
+
+//     [firstname, surname].forEach((i)=>{
+//         log(i);
+//     })
+
+//     for(var n = 0; n < firstname.length; n++){
+//         log(`Name is ${firstname[n]} ${surname[n]}`)
+//     }
+
+// }).catch(error => log(error));
+
+const getRandomMember = n => {
+    
+}
 
 //////////////////////////////////////////////////////////////////
 ///////////////////////////////GENERATORS
