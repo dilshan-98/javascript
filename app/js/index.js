@@ -5,6 +5,7 @@ import { filter, reject, resolve } from "bluebird";
 import $ from "jquery";
 import { log, logTitle } from "logger";
 import { forEach } from "react/lib/ReactChildren";
+import { g } from "react/lib/ReactDOMFactories";
 /* your imports */
 logTitle("Title");
 /* coding examples */
@@ -410,9 +411,23 @@ logTitle("Title");
 
 // }).catch(error => log(error));
 
-const getRandomMember = n => {
-    
-}
+// const getRandomMember = n => {
+//     const fetchUsers = fetch(`https://randomuser.me/api/?results=${n}`);
+//     fetchUsers.then((response) => {
+//         response.json().then((data) =>{
+//             log(JSON.stringify(data.results[0].gender))
+
+//             data.results.forEach(x => {
+//                 const {name, gender} = x;
+
+//                 log(`Name: ${name.first} Gender: ${gender}`)
+//             })
+//         })
+//     })
+// }
+
+// getRandomMember(10);
 
 //////////////////////////////////////////////////////////////////
 ///////////////////////////////GENERATORS
+//functions that are paused in async methodology
